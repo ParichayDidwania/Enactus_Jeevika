@@ -85,7 +85,8 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnFr
                 int id = menuItem.getItemId();
                 switch(id){
                     case R.id.menu_home_item:
-                        getSupportActionBar().setDisplayShowTitleEnabled(false);
+                        getSupportActionBar().setDisplayShowTitleEnabled(true);
+                        getSupportActionBar().setTitle("Services");
                         replaceFragment(mHomeFragment);
                         break;
                     case R.id.menu_booking_item:

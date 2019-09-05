@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment"
-    android:background="#ffffff">
+    android:background="#ffffff"
+    tools:context=".ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,7 +13,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/signup_wall">
+        android:background="@drawable/service">
 
         <LinearLayout
             android:id="@+id/linearLayout"

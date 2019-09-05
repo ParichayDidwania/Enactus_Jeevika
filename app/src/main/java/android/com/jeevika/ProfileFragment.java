@@ -2,12 +2,18 @@ package android.com.jeevika;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 
 /**
@@ -66,6 +72,17 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false);
+    }
+
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
+    {
+        ImageView i = (ImageView)view.findViewById(R.id.profile_default_img);
+
+        Bitmap src = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.deafult_image_icon2);
+
+        RoundedBitmapDrawable circularBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(), src);
+        circularBitmapDrawable.setCornerRadius(360);
+        i.setImageDrawable(circularBitmapDrawable);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
